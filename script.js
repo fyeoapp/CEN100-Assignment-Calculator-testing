@@ -1,13 +1,3 @@
-const calendarGrid = document.getElementById('calendar-grid');
-const calendarSelectMode = document.getElementById('calendar-select-mode');
-const selectStartBtn = document.getElementById('select-start-btn');
-const selectDueBtn = document.getElementById('select-due-btn');
-
-const prevMonthBtn = document.getElementById('prev-month');
-const nextMonthBtn = document.getElementById('next-month');
-
-const startDateInput = document.getElementById('start-date');
-const dueDateInput = document.getElementById('due-date');
 const warningDiv = document.getElementById('deadline-warning');
 const shortDeadlineWarning = document.getElementById('short-deadline-warning');
 
@@ -17,7 +7,6 @@ assignmentHeader.style = "color:#fff;font-size:1.3em;font-weight:bold;margin:18p
 const assignmentDesc = document.createElement('div');
 assignmentDesc.id = "assignment-desc";
 assignmentDesc.style = "color:#fff;font-size:1em;margin-bottom:8px;";
-const dueDateInputEl = document.getElementById('due-date');
 
 // Populate assignment select
 Object.keys(CEN100_ASSIGNMENTS).forEach(key => {
@@ -35,7 +24,6 @@ assignmentSelectEl.addEventListener('change', function() {
     } else {
         assignmentHeader.innerHTML = "";
         assignmentDesc.innerHTML = "";
-        dueDateInputEl.value = "";
     }
     // Toggle the layout class so controls fill the bottom when an assignment is selected
     const centerCard = document.querySelector('.center-form-card');
