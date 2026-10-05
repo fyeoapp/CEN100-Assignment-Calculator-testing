@@ -242,7 +242,7 @@ const CEN100_ASSIGNMENTS = {
         header: "Final Exam (24%)",
         description: `
       <ul>
-        <li>2-hour in-person cumulative written exam.</li>
+        <li>2-hour in-person written exam.</li>
         <li>Date TBA by Registrar (Final Exam Period: Dec 9–20).</li>
       </ul>
     `,
