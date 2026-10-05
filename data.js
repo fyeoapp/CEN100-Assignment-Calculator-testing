@@ -123,7 +123,7 @@ const CEN100_ASSIGNMENTS = {
     innovation: {
         id: "innovation",
         title: "Innovation Challenge Project",
-        header: "Innovation Challenge Project (30%+)",
+        header: "Innovation Challenge Project (41%)",
         description: `
       <ul>
         <li>Semester-long project in multidisciplinary teams.</li>
