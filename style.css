@@ -1,13 +1,13 @@
 
-    
+
 :root {
-  --page-bg: #fff;    
-  --main-bg: #fff;    
+  --page-bg: #fff;
+  --main-bg: #fff;
   --header-bg:rgb(111, 40, 146);
   --header-title: #ffffff;
   --image-bg: rgb(111, 40, 146);
-  
-  --sidebar-bg: #eceaea;     
+
+  --sidebar-bg: #eceaea;
   --sidebar-title: #fff;
   --sidebar-btn-bg: rgb(111, 40, 146);
   --sidebar-btn-hover: rgb(111, 40, 146);
@@ -26,7 +26,7 @@
   --form-content-text: #222;
   --deadline-warning-bg: #d7263d;
   --deadline-warning-text: #fff;
-  --right-column-menu: #e7ecff; 
+  --right-column-menu: #e7ecff;
   --announcement-bg: rgba(160, 9, 215, 0.97);
   --announcement-text: #fff;
 }
@@ -34,7 +34,7 @@
 /* Enforce a single, consistent UI font across the app */
 html, body, h1, h2, h3, h4, h5, h6,
 button, input, select, textarea, a, span, div, p, li,
-.header, .title, .main-header-bar, .main-header-title, 
+.header, .title, .main-header-bar, .main-header-title,
 .menu-group, .menu-group-title,.desktop-only
 .sidebar, .sidebar-group, .sidebar-group-title, .sidebar-btn, .form-row
 .right-support-group, .right-support-title, .right-btn, .reminder-box
@@ -54,7 +54,7 @@ button, input, select, textarea, a, span, div, p, li,
 }
 
 body {
-  background: var(--main-bg); 
+  background: var(--main-bg);
   padding-top: 80px !important;
   min-height: 100vh;
   margin: 0;
@@ -63,52 +63,6 @@ body {
   align-items: flex-start;
   position: relative;
 }
-
-/* body.dark-mode {
-  --page-bg: #181828;  
-  --main-bg: #23213a;          
-  --sidebar-bg: #181c2f;        
-  --right-column-menu: #181828;   
-  --header-bg: #2e1b4b;            
-  --header-title: #f3eaff;
-  --image-bg: #2d1e3a;
-  --sidebar-title: #f3eaff;
-  --sidebar-btn-bg: #32204a;
-  --sidebar-btn-hover: #4c2e6a;
-  --sidebar-btn-library: #952335;
-  --sidebar-btn-data: #1b537a;
-  --sidebar-btn-it: #6b184a;
-  --sidebar-btn-learning: #f6bc16;
-  --sidebar-btn-learning-text: #222;
-  --sidebar-btn-disabilities: #566b3b;
-  --sidebar-btn-graduate: #a05a18;
-  --form-label: #f3eaff;
-  --form-bg: #2a1c38;              /* Main calculator lavender background (was #3d2a5c) 
-  --form-header-bg: #2a1c38;
-  --form-header-hover: #3a2950;
-  --form-content-bg: #23213a;
-  --form-content-text: #e5e5f7;
-  --deadline-warning-bg: #d7263d;
-  --deadline-warning-text: #fff;
-  --announcement-bg: #3d2a5c;
-  --announcement-text: #fff;
-}
-
-body.dark-mode .right-column-menu {
-  border-left: 1px solid #23213a; /* Match dark background or set to transparent
-}
-
-body.dark-mode .fyeo-announcements {
-  background: #23213a;
-  color: #f3eaff;
-  box-shadow: 0 2px 8px rgba(30,0,40,0.18);
-}
-body.dark-mode .fyeo-announcements-title {
-  color: #b97fdc;
-}
-body.dark-mode .fyeo-announcements-content {
-  color: #e5e5f7;
-} */
 
 @media(max-width: 900px){
   body{
@@ -121,20 +75,20 @@ body.dark-mode .fyeo-announcements-content {
 
 }
 
-button:focus, 
-a:focus, 
+button:focus,
+a:focus,
 select:focus,
 [tabindex]:focus {
   outline: 3px solid #7F39FB;
-  outline-offset: 2px;       
+  outline-offset: 2px;
 }
 
-#assignment-select:focus, 
+#assignment-select:focus,
 #generateBtn:focus,
 .sidebar button:focus,
 .main-header-bar button:focus{
    outline: 3px solid #ffffff;
-  outline-offset: 2px; 
+  outline-offset: 2px;
 }
 
 .title {
@@ -220,7 +174,7 @@ select:focus,
 }
 
 .menu-panel[aria-hidden="true"] {
-    display: none; 
+    display: none;
   }
 
 /* When the menu is open/active */
@@ -362,7 +316,7 @@ select:focus,
   gap: 8px;
 }
 .sidebar-group-title .emoji {
-  font-size:1.2em; 
+  font-size:1.2em;
   margin-right:8px;
 }
 
@@ -448,20 +402,20 @@ select:focus,
 }
 
 .center-form-card .assignment-controls {
-  display: flex; 
-  flex-direction: column; 
-  gap: 12px; 
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
   width: 100%;
 }
 
 .center-form-card .warnings {
-  display: flex; 
+  display: flex;
   flex-direction: column;
-  position: static; 
-  align-items: flex-start; 
+  position: static;
+  align-items: flex-start;
   justify-content: center;
   padding: 10px;
-  
+
 }
 
 
@@ -582,7 +536,7 @@ select:focus,
   width: 90%; /* slightly smaller */
   display: flex;
   flex-direction: column;
-  
+
 }
 
 .right-support-title {
@@ -597,7 +551,7 @@ select:focus,
 }
 
 .right-support-title .emoji {
-  font-size:1.2em; 
+  font-size:1.2em;
   margin-right: 12px;
   justify-content: flex-start;
 }
@@ -746,7 +700,7 @@ select:focus,
 
 @media(max-width: 1000px){
   .center-welcome-title{
-    margin-top: 6px !important; 
+    margin-top: 6px !important;
     font-size: 1.3em !important;
   }
 }
@@ -760,9 +714,9 @@ select:focus,
 }
 
 @media(max-width: 1100px){
-  .center-welcome-desc { 
-    margin-bottom: 10px !important; 
-    font-size: 0.98em !important; 
+  .center-welcome-desc {
+    margin-bottom: 10px !important;
+    font-size: 0.98em !important;
   }
 }
 
@@ -806,7 +760,7 @@ select:focus,
 /* keep small-screen behaviour intact */
 @media (max-width: 1100px) {
   .step {
-    font-size: 0.80em; 
+    font-size: 0.80em;
     gap: 8px;
   }
 }
@@ -870,7 +824,7 @@ select:focus,
 .download-btn img {
   display: block;
   /* Control the size of your button here */
-  width: 100%; 
+  width: 100%;
   height: auto;
 }
 
@@ -884,7 +838,7 @@ select:focus,
   display: flex;
   gap: 5px;
   align-items: center;
-  flex-direction: row; 
+  flex-direction: row;
   background-color: transparent;
   border: none;
   margin-bottom: 10px;
@@ -1049,7 +1003,7 @@ select:focus,
 
 @media(max-width: 1100px){
   .calendar-preview{
-    padding: 12px; 
+    padding: 12px;
     margin-top: 12px;
   }
 }
@@ -1157,26 +1111,26 @@ select:focus,
     } */
     /* .generate-row {
       width: 100%;
-      margin-top: 26px; /* move the button lower 
+      margin-top: 26px; /* move the button lower
       display: flex;
       justify-content: flex-start; /* keep button on left
     } */
     /* .generate-row .generate-btn { max-width: 340px; } */
-    
+
     }
     /* On wider screens, position warnings at the top-right of the calendar preview */
     /* @media (min-width: 901px) {
       /* Keep warnings in normal flow; for calendar preview we want them above the grid so
-         we give them bottom spacing when used there. 
+         we give them bottom spacing when used there.
       .calendar-preview .warnings { position: static; margin-bottom: 18px; align-items: flex-start; }
 
       .calendar-preview .warning-box, .center-form-card .warning-box { max-width: 320px; font-size: 0.95em; }
     } */
     @media (max-width: 900px) {
-      .assignment-controls { flex-direction: column; } 
-      .assignment-controls .form-row { width: 100%; } 
+      .assignment-controls { flex-direction: column; }
+      .assignment-controls .form-row { width: 100%; }
     }
-  
+
 .timeline{
   display:none;
 }
@@ -1189,7 +1143,7 @@ select:focus,
   box-shadow: 0 4px 24px rgba(80,0,120,0.13);
   padding: 32px;
   width:100%;
-  max-width: 700px; 
+  max-width: 700px;
   margin: 0 auto;
   box-sizing: border-box;
   justify-content: center;
@@ -1203,7 +1157,7 @@ select:focus,
     justify-content: flex-end;
   } */
 
-  
+
   /* Sidebar should become a horizontal, wrapped control bar */
   /* .sidebar {
     position: static;
@@ -1226,10 +1180,10 @@ select:focus,
   /* .step span { width: 36px; height: 36px; font-size: 0.95em; } */
 
   /* Announcement overlay safe area */
-  
+
 
   /* Ensure no horizontal overflow */
-  
+
 }
 /* Also include a slightly larger breakpoint to catch small tablets */
 /* @media (min-width: 481px) and (max-width: 900px) {
@@ -1261,7 +1215,7 @@ select:focus,
   /* body {
     padding-top: 8px !important;
   } */
-  
+
   /* .center-form-card {
     padding: 10px !important;
     gap: 10px !important;
@@ -1273,7 +1227,7 @@ select:focus,
   .calendar-preview { margin-top: 8px !important; padding: 10px !important; }
 
   /* Move announcement overlay up into the safe area */
-  
+
   /* Ensure no horizontal overflow */
   /* html, body { overflow-x: hidden; } */
 }
@@ -1285,7 +1239,7 @@ select:focus,
 /* Support drawer base styles (hidden by default) */
 /* #support-drawer {
   position: fixed;
-  top: 80px; /* align below header 
+  top: 80px; /* align below header
   right: 0;
   left: 0;
   bottom: 0;
@@ -1398,7 +1352,7 @@ select:focus,
   /* padding: 32px 0; Add vertical padding for better appearance */
   /* background: var(--form-bg);
 }  */
-  
+
 /* SIDEBAR */
 /* .sidebar-title {
   color: var(--sidebar-title);
@@ -1506,10 +1460,10 @@ select:focus,
 }
 
 .step-header:hover {
-  background: #a96acb; /* slightly darker on hover 
+  background: #a96acb; /* slightly darker on hover
 } */
 
-/* 
+/*
 .step-icon {
   font-size: 1.3em;
   margin-left: 18px;
@@ -1675,7 +1629,7 @@ select:focus,
 /*.content-row {
   display: flex;
   flex-direction: row;
-  justify-content: center; /* Center children horizontally 
+  justify-content: center; /* Center children horizontally
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
@@ -1709,7 +1663,7 @@ select:focus,
   pointer-events: auto;
   z-index: 1000;
 } */
-/* 
+/*
 .footer-bar {
   display: inline-block;
   width: 6px;
