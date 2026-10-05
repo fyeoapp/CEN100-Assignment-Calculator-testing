@@ -57,6 +57,7 @@ const CEN100_ASSIGNMENTS = {
         description: `
       <ul>
         <li>Professional email exercise.</li>
+        <li>Must be sent from your official TMU email account.</li>
         <li>Submitted to the GA or through the D2L portal only. Dr. Amleh does not accept submissions by email.</li>
       </ul>`,
         dueDate: "2026-09-23",
@@ -69,7 +70,7 @@ const CEN100_ASSIGNMENTS = {
             `<b>Step 3: Review and Edit</b><br>
     Review your email for complete sentences, correct spelling, and proper grammar.`,
             `<b>Step 4: Submission</b><br>
-    Submit your assignment to your GA or through the D2L portal only by September 23.`
+    Ensure you are using your official TMU email account. Submit your assignment to your GA or through the D2L portal only by September 23.`
         ]
     },
     academic_integrity: {
@@ -139,7 +140,7 @@ const CEN100_ASSIGNMENTS = {
         <li>Two reflections required throughout the semester.</li>
       </ul>
     `,
-        dueDate: "2026-10-28",
+        dueDate: "2026-10-28 and 2026-12-02",
         steps: [
             `<b>Step 1: First Reflection</b><br>
     Complete and submit your first personal reflection on D2L by October 28.`,
@@ -157,7 +158,7 @@ const CEN100_ASSIGNMENTS = {
         <li>Due dates span across Oct 7 and Nov 4.</li>
       </ul>
     `,
-        dueDate: "2026-10-07",
+        dueDate: "2026-10-07 and 2026-11-04",
         steps: [
             `<b>Step 1: Early MATLAB Assignments</b><br>
   - Complete the first set of project-integrated MATLAB assignments with your partner.<br>
@@ -178,7 +179,7 @@ const CEN100_ASSIGNMENTS = {
         <li><b>Checkpoints:</b> Nov 4 and Dec 2.</li>
       </ul>
     `,
-        dueDate: "2026-11-04",
+        dueDate: "2026-11-04 and 2026-12-02",
         steps: [
             `<b>Step 1: Set Up Shared Notebook</b><br>
     Maintain one shared engineering design notebook (physical or digital) as your team's official project record.`,
@@ -194,19 +195,19 @@ const CEN100_ASSIGNMENTS = {
         header: "Innovation Challenge Project (41%)",
         description: `
       <ul>
-        <li>Semester-long project organized around four progressive phases: Problem Discovery, Concept Development, Prototype, and Pitch/Showcase.</li>
+        <li>Semester-long project organized around four progressive phases: Problem Discovery and Team Formation, Engineering Analysis and Concept Development, Prototype and Innovation Development, and Pitch, Showcase, and Reflection.</li>
         <li>Culminates in an Innovation Showcase pitched to industry judges.</li>
       </ul>
     `,
-        dueDate: "2026-11-25",
+        dueDate: "2026-11-25 and 2026-12-02",
         steps: [
             `<b>Milestone 1: Team Contract + Task Outline (2% - Sept 23)</b><br>
-    Submit your Team Contract and Task Outline via D2L.`,
+    Submit your Team Contract and Task Outline via D2L. You must define communication methods, schedules, expectations, and conflict resolution.`,
             `<b>Milestone 2: Project Outline + User Research (4% - Oct 2)</b><br>
     Define the real-world engineering problem your team will solve. Submit via D2L on Friday, Oct 2.`,
             `<b>Milestone 3: Failure Analysis Labs (6% - Oct 21)</b><br>
-    <b>Part 1:</b> In sub-teams of 4-5, analyze a documented engineering failure using at least 2-3 credible sources and organize causes using a fishbone (Ishikawa) diagram. (2%)<br>
-    <b>Part 2:</b> The full team applies a predictive Failure Modes and Effects Analysis (FMEA) across five failure categories (technical, human, environmental, ethical, business) to your own project. Identify a specific design insight to apply to your project. (4%)`,
+    <b>Part 1 (Oct 14):</b> In sub-teams of 4-5, analyze a documented engineering failure using at least 2-3 credible sources and organize causes using a fishbone (Ishikawa) diagram. (2%)<br>
+    <b>Part 2 (Oct 21):</b> The full team applies a predictive Failure Modes and Effects Analysis (FMEA) across five failure categories (technical, human, environmental, ethical, business) to your own project. Identify a specific design insight to apply to your project. (4%)`,
             `<b>Milestone 4: Midterm Design Review (8% - Nov 4)</b><br>
     Present your progress (including the design insight from Milestone 3) to a panel including faculty and IBZ mentors.`,
             `<b>Milestone 5: Low-Fidelity Prototype (4% - Nov 25 & Dec 2)</b><br>
