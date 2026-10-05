@@ -304,7 +304,7 @@ daysGrid.addEventListener('touchend', (e) => {
 
 }, { passive: true });
 
-    document.getElementById('assignment-form').addEventListener('submit', function(e) {
+document.getElementById('assignment-form').addEventListener('submit', function(e) {
     e.preventDefault();
 
     const assignment = document.getElementById('assignment-select').value;
@@ -372,10 +372,10 @@ daysGrid.addEventListener('touchend', (e) => {
 
     breakdownDiv.innerHTML = `
     <div style="font-weight:bold;color:#a009d7;margin-bottom:18px;font-size:1.35em;">Step-by-Step Timeline:</div>
-    <ol style="padding-left:32px;">
-      ${steps.map(step => `<li style="margin-bottom:18px;line-height:1.7;">${step}</li>`).join('')}
-    </ol>
-    <div style="display:flex; gap:16px; margin-top:24px;" justify content>
+    <div class="timeline-container fade-in">
+      ${steps.map(step => `<div class="timeline-step">${step}</div>`).join('')}
+    </div>
+    <div class="fade-in" style="display:flex; gap:16px; margin-top:24px;" justify content>
       <button id="download-timeline-btn" class="btn btn-yellow">
         Save and Download
       </button>
@@ -397,10 +397,10 @@ daysGrid.addEventListener('touchend', (e) => {
                 });
 
                 // Get the timeline HTML and convert to plain text for PDF
-                const timelineHtml = breakdownDiv.querySelector('ol').innerHTML;
+                const timelineContainer = breakdownDiv.querySelector('.timeline-container');
                 const tempDiv = document.createElement('div');
-                tempDiv.innerHTML = timelineHtml;
-                const stepsText = Array.from(tempDiv.querySelectorAll('li')).map(li => li.innerText);
+                if (timelineContainer) tempDiv.innerHTML = timelineContainer.innerHTML;
+                const stepsText = Array.from(tempDiv.querySelectorAll('.timeline-step')).map(el => el.innerText);
 
                 doc.setFont("helvetica", "bold");
                 doc.setFontSize(18);
@@ -489,6 +489,3 @@ function closeMenu() {
 
 menuBtn.addEventListener('click', toggleMenu);
 overlay.addEventListener('click', closeMenu);
-
-
-
