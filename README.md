@@ -6,10 +6,11 @@ Welcome to the CEN100 Assignment Calculator project. This tool is designed to he
 
 The application is built to be as simple as possible. It runs entirely in the browser using standard web technologies. There is no complex backend, no build tools, and no server required.
 
-The codebase consists of three main parts:
+The codebase consists of four main parts:
 * **index.html**: The main structure of the web page.
 * **style.css**: The styling and layout rules.
 * **script.js**: The logic that drives the application, such as building the timeline and handling user interactions.
+* **data.js**: All the course content (assignments, descriptions, due dates, and timeline steps).
 
 ## How to Update the Course Content
 
@@ -19,7 +20,7 @@ All the assignments, descriptions, due dates, and timeline steps are stored in a
 
 If the course syllabus changes next year, simply open `data.js` in any text editor and update the text. For example:
 1. Locate the assignment you want to change inside `data.js`.
-2. Update the `title`, `dueDate`, or the `steps` array to match the new syllabus.
+2. Update the `title` (dropdown name), `header` (heading shown with the grade weight), `description`, `dueDate`, or the `steps` array to match the new syllabus.
 3. Save the file.
 4. Refresh your browser. The website will automatically update the dropdown menus and timelines to reflect your changes.
 
