@@ -189,8 +189,6 @@ document.getElementById('clearBtn').onclick = () => {
     selectingEnd = false;
     updateFooter();
     renderCalendar();
-    checkDeadlineWarning();
-    document.getElementById('timelineBreakdown').innerHTML = '';
 };
 
 document.getElementById('generateBtn').onclick = () => {
@@ -223,19 +221,17 @@ function parseInput(str) {
 }
 
 startDisplay.addEventListener('change', () => {
+    console.log(startDisplay.value);
     const parsed = parseInput(startDisplay.value);
+    console.log(parsed);
     if (parsed) {
         startDate = parsed;
-        if (endDate && startDate > endDate) {
-            [startDate, endDate] = [endDate, startDate];
-        }
-        selectingEnd = !endDate;
+        if (endDate && startDate > endDate) endDate = null;
         viewYear = startDate.getFullYear();
         viewMonth = startDate.getMonth();
         yearSelect.value = viewYear;
         renderCalendar();
         updateFooter();
-        checkDeadlineWarning();
     } else {
         startDisplay.value = fmt(startDate);
     }
@@ -248,13 +244,11 @@ endDisplay.addEventListener('change', () => {
         if (startDate && endDate < startDate) {
             [startDate, endDate] = [endDate, startDate];
         }
-        selectingEnd = false;
         viewYear = endDate.getFullYear();
         viewMonth = endDate.getMonth();
         yearSelect.value = viewYear;
         renderCalendar();
         updateFooter();
-        checkDeadlineWarning();
     } else {
         endDisplay.value = fmt(endDate);
     }
@@ -361,7 +355,7 @@ document.getElementById('assignment-form').addEventListener('submit', function(e
         steps = generateStepRanges(assignmentData.steps, startDate, days);
     } else {
         // Generic fallback for other assignments
-        steps = [`Days 1-${days + 1} (${startDate.toLocaleDateString()} to ${endDate.toLocaleDateString()}): Work on your assignment. Break your work into research, drafting, editing, and final review as needed.`];
+        steps = [`Days 1-${days + 1} (${startDate.toLocaleDateString()} to ${dueDate.toLocaleDateString()}): Work on your assignment. Break your work into research, drafting, editing, and final review as needed.`];
     }
 
     breakdownDiv.innerHTML = `
@@ -369,7 +363,7 @@ document.getElementById('assignment-form').addEventListener('submit', function(e
     <div class="timeline-container fade-in">
       ${steps.map(step => `<div class="timeline-step">${step}</div>`).join('')}
     </div>
-    <div class="fade-in" style="display:flex; gap:16px; margin-top:24px;">
+    <div class="fade-in" style="display:flex; gap:16px; margin-top:24px;" justify content>
       <button id="download-timeline-btn" class="btn btn-yellow">
         Save and Download
       </button>
@@ -402,13 +396,10 @@ document.getElementById('assignment-form').addEventListener('submit', function(e
 
                 doc.setFont("helvetica", "normal");
                 doc.setFontSize(12);
-                const assignmentTitle = assignmentData ? (assignmentData.header || assignmentData.title) : assignment;
-                doc.text(`Assignment: ${assignmentTitle}`, 40, 72);
-                doc.text(`Plan: ${start} to ${due}`, 40, 90);
 
                 const pageHeight = doc.internal.pageSize.height;
                 const margin = 40;
-                let y = 120;
+                let y = 80;
                 const lineHeight = 18;
 
                 stepsText.forEach((step, idx) => {
@@ -429,6 +420,13 @@ document.getElementById('assignment-form').addEventListener('submit', function(e
             };
         }
 
+        // Add feedback button logic
+        const feedbackBtn = document.getElementById('feedback-btn');
+        if (feedbackBtn) {
+            feedbackBtn.onclick = function() {
+                window.open('https://docs.google.com/forms/d/e/1FAIpQLScGjoCU9KW7aR4jlmjI10SKbpqavCE4X8C2ceFkaLExmEQukg/viewform?usp=sharing&ouid=103979447744273921797', '_blank');
+            };
+        }
     }, 0);
 });
 
