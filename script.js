@@ -1,13 +1,3 @@
-const calendarGrid = document.getElementById('calendar-grid');
-const calendarSelectMode = document.getElementById('calendar-select-mode');
-const selectStartBtn = document.getElementById('select-start-btn');
-const selectDueBtn = document.getElementById('select-due-btn');
-
-const prevMonthBtn = document.getElementById('prev-month');
-const nextMonthBtn = document.getElementById('next-month');
-
-const startDateInput = document.getElementById('start-date');
-const dueDateInput = document.getElementById('due-date');
 const warningDiv = document.getElementById('deadline-warning');
 const shortDeadlineWarning = document.getElementById('short-deadline-warning');
 
@@ -17,7 +7,6 @@ assignmentHeader.style = "color:#fff;font-size:1.3em;font-weight:bold;margin:18p
 const assignmentDesc = document.createElement('div');
 assignmentDesc.id = "assignment-desc";
 assignmentDesc.style = "color:#fff;font-size:1em;margin-bottom:8px;";
-const dueDateInputEl = document.getElementById('due-date');
 
 // Populate assignment select
 Object.keys(CEN100_ASSIGNMENTS).forEach(key => {
@@ -35,7 +24,6 @@ assignmentSelectEl.addEventListener('change', function() {
     } else {
         assignmentHeader.innerHTML = "";
         assignmentDesc.innerHTML = "";
-        dueDateInputEl.value = "";
     }
     // Toggle the layout class so controls fill the bottom when an assignment is selected
     const centerCard = document.querySelector('.center-form-card');
@@ -201,6 +189,8 @@ document.getElementById('clearBtn').onclick = () => {
     selectingEnd = false;
     updateFooter();
     renderCalendar();
+    checkDeadlineWarning();
+    document.getElementById('timelineBreakdown').innerHTML = '';
 };
 
 document.getElementById('generateBtn').onclick = () => {
@@ -233,17 +223,19 @@ function parseInput(str) {
 }
 
 startDisplay.addEventListener('change', () => {
-    console.log(startDisplay.value);
     const parsed = parseInput(startDisplay.value);
-    console.log(parsed);
     if (parsed) {
         startDate = parsed;
-        if (endDate && startDate > endDate) endDate = null;
+        if (endDate && startDate > endDate) {
+            [startDate, endDate] = [endDate, startDate];
+        }
+        selectingEnd = !endDate;
         viewYear = startDate.getFullYear();
         viewMonth = startDate.getMonth();
         yearSelect.value = viewYear;
         renderCalendar();
         updateFooter();
+        checkDeadlineWarning();
     } else {
         startDisplay.value = fmt(startDate);
     }
@@ -256,11 +248,13 @@ endDisplay.addEventListener('change', () => {
         if (startDate && endDate < startDate) {
             [startDate, endDate] = [endDate, startDate];
         }
+        selectingEnd = false;
         viewYear = endDate.getFullYear();
         viewMonth = endDate.getMonth();
         yearSelect.value = viewYear;
         renderCalendar();
         updateFooter();
+        checkDeadlineWarning();
     } else {
         endDisplay.value = fmt(endDate);
     }
@@ -367,7 +361,7 @@ document.getElementById('assignment-form').addEventListener('submit', function(e
         steps = generateStepRanges(assignmentData.steps, startDate, days);
     } else {
         // Generic fallback for other assignments
-        steps = [`Days 1-${days + 1} (${startDate.toLocaleDateString()} to ${dueDate.toLocaleDateString()}): Work on your assignment. Break your work into research, drafting, editing, and final review as needed.`];
+        steps = [`Days 1-${days + 1} (${startDate.toLocaleDateString()} to ${endDate.toLocaleDateString()}): Work on your assignment. Break your work into research, drafting, editing, and final review as needed.`];
     }
 
     breakdownDiv.innerHTML = `
@@ -375,7 +369,7 @@ document.getElementById('assignment-form').addEventListener('submit', function(e
     <div class="timeline-container fade-in">
       ${steps.map(step => `<div class="timeline-step">${step}</div>`).join('')}
     </div>
-    <div class="fade-in" style="display:flex; gap:16px; margin-top:24px;" justify content>
+    <div class="fade-in" style="display:flex; gap:16px; margin-top:24px;">
       <button id="download-timeline-btn" class="btn btn-yellow">
         Save and Download
       </button>
@@ -408,10 +402,13 @@ document.getElementById('assignment-form').addEventListener('submit', function(e
 
                 doc.setFont("helvetica", "normal");
                 doc.setFontSize(12);
+                const assignmentTitle = assignmentData ? (assignmentData.header || assignmentData.title) : assignment;
+                doc.text(`Assignment: ${assignmentTitle}`, 40, 72);
+                doc.text(`Plan: ${start} to ${due}`, 40, 90);
 
                 const pageHeight = doc.internal.pageSize.height;
                 const margin = 40;
-                let y = 80;
+                let y = 120;
                 const lineHeight = 18;
 
                 stepsText.forEach((step, idx) => {
@@ -432,13 +429,6 @@ document.getElementById('assignment-form').addEventListener('submit', function(e
             };
         }
 
-        // Add feedback button logic
-        const feedbackBtn = document.getElementById('feedback-btn');
-        if (feedbackBtn) {
-            feedbackBtn.onclick = function() {
-                window.open('https://docs.google.com/forms/d/e/1FAIpQLScGjoCU9KW7aR4jlmjI10SKbpqavCE4X8C2ceFkaLExmEQukg/viewform?usp=sharing&ouid=103979447744273921797', '_blank');
-            };
-        }
     }, 0);
 });
 
