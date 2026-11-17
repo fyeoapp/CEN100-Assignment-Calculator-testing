@@ -3,7 +3,7 @@
   <head>
   <meta charset="UTF-8">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="icon" href="FYEOFavicon.png" type="image/png">
+  <link rel="icon" href="images/FYEOFavicon.png" type="image/png">
   <link rel="stylesheet" href="style.css">
     <script src="data.js" defer></script>
   <script src ="script.js" defer></script>
@@ -179,8 +179,6 @@
       </span>
       </a>
       </div>
-
-      </div>
   </nav>
 
   <!-- Right column with centered logo -->
@@ -200,7 +198,7 @@
         <button class="btn btn-yellow" onclick="window.open('https://www.youtube.com/watch?v=gEh5bCdIyP8', '_blank')">OneNote Tutorial</button>
         <button class="btn btn-yellow" onclick="window.open('https://courses.torontomu.ca/d2l/le/content/1193997/Home?itemIdentifier=D2L.LE.Content.ContentObject.ModuleCO-7240898', '_blank')">Matlab Help</button>
         <button class="btn btn-blue" onclick="window.open('https://docs.google.com/document/d/1HducjGhmHvhhqH_OaVzU-p0MD1s9M-iEhJgyHoiREpM/edit?tab=t.0#heading=h.ix2pvisfo6g4', '_blank')">CEN100 Contact</button>
-        <button id="feedback-btn" class="btn btn-blue" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLScGjoCU9KW7aR4jlmjI10SKbpqavCE4X8C2ceFkaLExmEQukg/viewform?usp=sharing&ouid=103979447744273921797', '_blank');">Share Feedback </button>
+        <button id="feedback-btn" class="btn btn-blue" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLScGjoCU9KW7aR4jlmjI10SKbpqavCE4X8C2ceFkaLExmEQukg/viewform?usp=sharing&ouid=103979447744273921797', '_blank');">Share Feedback</button>
       </div>
 
   <div class="right-fyeo-footer">
@@ -254,15 +252,9 @@
             <option value="">-- Choose an assignment --</option>
           </select>
         </div>
-        <!-- <div class="form-row">
-          <label for="start-date">Start Date</label>
-          <input type="text" id="start-date" readonly placeholder="Select from calendar">
-        </div>
-        <div class="form-row">
-          <label for="due-date">Due Date</label>
-          <input type="text" id="due-date" readonly placeholder="Select from calendar">
-        </div> -->
-        </div>
+        <div id="assignment-header" class="assignment-header"></div>
+        <div id="assignment-desc" class="assignment-desc"></div>
+      </div>
        <div class="cal-card">
         <div class="cal-header">
           <button type="button" class="nav-btn" id="prevBtn" aria-label="Previous month">
