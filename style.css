@@ -370,6 +370,31 @@ select:focus,
   gap: 10px
 }
 
+.assignment-header {
+  color: #fff;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.assignment-desc {
+  color: #fff;
+  font-size: 1em;
+}
+
+.assignment-desc ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.assignment-desc .assignment-due {
+  margin: 8px 0 0;
+}
+
+.assignment-header:empty,
+.assignment-desc:empty {
+  display: none;
+}
+
 
 .main-content {
   /* padding: 6vw; */

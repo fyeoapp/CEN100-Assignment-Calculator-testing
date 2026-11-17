@@ -2,11 +2,15 @@ const warningDiv = document.getElementById('deadline-warning');
 const shortDeadlineWarning = document.getElementById('short-deadline-warning');
 
 const assignmentSelectEl = document.getElementById('assignment-select');
-const assignmentHeader = document.createElement('div');
-assignmentHeader.style = "color:#fff;font-size:1.3em;font-weight:bold;margin:18px 0 8px 0;";
-const assignmentDesc = document.createElement('div');
-assignmentDesc.id = "assignment-desc";
-assignmentDesc.style = "color:#fff;font-size:1em;margin-bottom:8px;";
+const assignmentHeader = document.getElementById('assignment-header');
+const assignmentDesc = document.getElementById('assignment-desc');
+
+// Turn "2026-10-28 and 2026-12-02" into "Oct 28 and Dec 2"
+function formatOfficialDueDate(str) {
+    return str.replace(/(\d{4})-(\d{2})-(\d{2})/g, (_, y, m, d) =>
+        new Date(+y, +m - 1, +d).toLocaleDateString(undefined, { month: 'short', day: 'numeric' })
+    );
+}
 
 // Populate assignment select
 Object.keys(CEN100_ASSIGNMENTS).forEach(key => {
@@ -18,9 +22,13 @@ Object.keys(CEN100_ASSIGNMENTS).forEach(key => {
 
 assignmentSelectEl.addEventListener('change', function() {
     const val = assignmentSelectEl.value;
-    if (CEN100_ASSIGNMENTS[val]) {
-        assignmentHeader.innerHTML = CEN100_ASSIGNMENTS[val].header;
-        assignmentDesc.innerHTML = CEN100_ASSIGNMENTS[val].description;
+    const data = CEN100_ASSIGNMENTS[val];
+    if (data) {
+        assignmentHeader.innerHTML = data.header;
+        const due = data.dueDate
+            ? `<p class="assignment-due">Course outline due date: <b>${formatOfficialDueDate(data.dueDate)}</b></p>`
+            : '';
+        assignmentDesc.innerHTML = data.description + due;
     } else {
         assignmentHeader.innerHTML = "";
         assignmentDesc.innerHTML = "";
@@ -355,7 +363,7 @@ document.getElementById('assignment-form').addEventListener('submit', function(e
         steps = generateStepRanges(assignmentData.steps, startDate, days);
     } else {
         // Generic fallback for other assignments
-        steps = [`Days 1-${days + 1} (${startDate.toLocaleDateString()} to ${dueDate.toLocaleDateString()}): Work on your assignment. Break your work into research, drafting, editing, and final review as needed.`];
+        steps = [`Days 1-${days + 1} (${startDate.toLocaleDateString()} to ${endDate.toLocaleDateString()}): Work on your assignment. Break your work into research, drafting, editing, and final review as needed.`];
     }
 
     breakdownDiv.innerHTML = `
@@ -417,14 +425,6 @@ document.getElementById('assignment-form').addEventListener('submit', function(e
                 });
 
                 doc.save("assignment-timeline.pdf");
-            };
-        }
-
-        // Add feedback button logic
-        const feedbackBtn = document.getElementById('feedback-btn');
-        if (feedbackBtn) {
-            feedbackBtn.onclick = function() {
-                window.open('https://docs.google.com/forms/d/e/1FAIpQLScGjoCU9KW7aR4jlmjI10SKbpqavCE4X8C2ceFkaLExmEQukg/viewform?usp=sharing&ouid=103979447744273921797', '_blank');
             };
         }
     }, 0);
