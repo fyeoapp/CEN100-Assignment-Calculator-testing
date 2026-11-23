@@ -26,7 +26,7 @@ assignmentSelectEl.addEventListener('change', function() {
     if (data) {
         assignmentHeader.innerHTML = data.header;
         const due = data.dueDate
-            ? `<p class="assignment-due">Course outline due date: <b>${formatOfficialDueDate(data.dueDate)}</b></p>`
+            ? `<p class="assignment-due">Due date: <b>${formatOfficialDueDate(data.dueDate)}</b></p>`
             : '';
         assignmentDesc.innerHTML = data.description + due;
     } else {
