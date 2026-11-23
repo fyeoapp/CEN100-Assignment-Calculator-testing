@@ -75,7 +75,7 @@ const CEN100_ASSIGNMENTS = {
         description: `
       <ul>
         <li>Professional email exercise, sent from your official TMU email account.</li>
-        <li>Send your email draft, your choice paragraph and your reflection to your <b>Project Manager (PM)</b>.</li>
+        <li>Send your email draft, your research-choice paragraph and your reflection to your <b>Project Manager (PM)</b>.</li>
         <li>Due Wednesday, Sept 23 at 3:00 PM.</li>
         <li>One revision is allowed, but only after an on-time first attempt.</li>
       </ul>`,
@@ -85,12 +85,12 @@ const CEN100_ASSIGNMENTS = {
     Review the Email Policy in the course outline and the assignment handout: the required format, tone and information.`,
             `<b>Step 2: Draft the Email</b><br>
     Draft a professional email from your TMU account. The subject line must include <b>F2026CEN100</b>, and the body must include your name and student number.`,
-            `<b>Step 3: Write the Choice Paragraph and Reflection</b><br>
-    Write the choice paragraph and the reflection the handout asks for.`,
+            `<b>Step 3: Write the Research-Choice Paragraph and Reflection</b><br>
+    Write the research-choice paragraph and the reflection the handout asks for.`,
             `<b>Step 4: Review and Edit</b><br>
     Check for complete sentences, correct spelling and proper grammar.`,
             `<b>Step 5: Send It to Your PM</b><br>
-    Email the draft, choice paragraph and reflection to your Project Manager before 3:00 PM. Submit on time so that you keep your one allowed revision.`
+    Email the draft, research-choice paragraph and reflection to your Project Manager before 3:00 PM. Submit on time so that you keep your one allowed revision.`
         ]
     },
     academic_integrity: {
@@ -140,7 +140,7 @@ const CEN100_ASSIGNMENTS = {
         header: "Attendance Quizzes Participation (5%)",
         description: `
       <ul>
-        <li>Short D2L quizzes given at a random point during your assigned lab/tutorial section.</li>
+        <li>Short D2L quizzes given during your assigned tutorial. Check your tutorial's quiz schedule on D2L. For Section 29 they run Wednesdays, 5:45 to 6:00 PM, with one attempt each.</li>
         <li>Attendance in your own section is mandatory.</li>
         <li>Answering for another student, or having someone answer for you while you are absent, is an academic integrity violation and earns zero for the whole 5%.</li>
       </ul>
@@ -148,7 +148,7 @@ const CEN100_ASSIGNMENTS = {
         dueDate: "",
         steps: [
             `<b>Step 1: Attend Your Assigned Section In Person</b><br>
-    You must be physically present in your own assigned section to get credit. Taking a quiz while absent earns no credit and may raise an academic integrity concern.`,
+    You must be physically present in your own assigned tutorial to get credit. Taking a quiz while absent earns no credit and may raise an academic integrity concern.`,
             `<b>Step 2: Complete the D2L Quiz When It Is Given</b><br>
     Answer the quiz on D2L when it is given during the session.`
         ]
@@ -214,7 +214,7 @@ const CEN100_ASSIGNMENTS = {
             `<b>Step 1: Set Up the Shared Notebook</b><br>
     Keep one shared design notebook as your team's official project record. Put a copy of the Team Contract in it.`,
             `<b>Step 2: Write As You Go</b><br>
-    After every meeting, lab or work session, add a dated entry with your name or initials: decisions, user research, sketches, test results. Don't leave it to the end.`,
+    After every meeting, lab or work session, add a dated entry with your name or initials: decisions, user research, sketches, test results. Don't leave it to the end. Your entries are your proof of contribution for the Peer Evaluation.`,
             `<b>Step 3: Checkpoint 1 (Nov 4)</b><br>
     Check that every member has an entry, and be ready to talk about yours at the Midterm Design Review. Export the notebook to PDF and submit it by 3:00 PM.`,
             `<b>Step 4: Checkpoint 2 (Dec 2)</b><br>
@@ -230,13 +230,16 @@ const CEN100_ASSIGNMENTS = {
         <li>Semester-long team project in four phases: Problem Discovery and Team Formation, Engineering Analysis and Concept Development, Prototype and Innovation Development, and Pitch, Showcase and Reflection.</li>
         <li>Culminates in the Innovation Showcase in front of industry judges. Teams entering the competition must sign up two weeks before Dec 2.</li>
         <li><b>Milestone dates:</b> Sept 23 (M1), Oct 2 (M2), Oct 21 &amp; 28 (M3), Nov 4 (M4), Nov 25 &amp; Dec 2 (M5&ndash;M6), Dec 2 (M7&ndash;M8).</li>
+        <li><b>Rules for every team submission:</b> put your team number/name and section in the header, and follow each assignment's cover-page and signature instructions. Late work earns zero without valid documentation.</li>
+        <li>Team roles change each phase: Phase 2 starts Sept 28, Phase 3 Nov 2 and Phase 4 Nov 23.</li>
+        <li>GenAI only where permitted, and disclose it when required. AI cannot replace real user research, engineering analysis, design decisions or prototype testing.</li>
         <li>Each milestone below also has its own entry in this calculator with step-by-step instructions.</li>
       </ul>
     `,
         dueDate: "2026-11-25 and 2026-12-02",
         steps: [
             `<b>Milestone 1: Team Contract + Task Outline (2%)</b><br>
-    One team upload to D2L: how you will work together (communication, schedule, expectations, conflict resolution) and the list of what needs doing and when. Keep a copy in the notebook and keep the Task Outline updated all semester.`,
+    One team upload to D2L: how you will work together (communication, schedule, expectations, conflict resolution) and the list of what needs doing and when. Agree an internal deadline for teammates to review work before each submission. Every member signs the Team Contract. Keep a copy in the notebook and keep the Task Outline updated all semester.`,
             `<b>Milestone 2: Project Outline + User Research (4%)</b><br>
     2&ndash;3 pages: problem statement, research with at least 5 real people, needs tree, 2&ndash;4 early ideas and the work division. Due Fri Oct 2.`,
             `<b>Milestone 3: Failure Analysis Labs (6%)</b><br>
@@ -271,7 +274,7 @@ const CEN100_ASSIGNMENTS = {
             `<b>Step 2: Plan the User Research</b><br>
     Write 3&ndash;5 research questions and line up <b>at least 5 real people</b> to talk to.`,
             `<b>Step 3: Do the Research</b><br>
-    Tell everyone it's for CEN100 and that taking part is voluntary. Take notes during each conversation, and log each person by role, method and one key quote.`,
+    Tell everyone it's for CEN100 and that taking part is voluntary. Take notes during each conversation, and log each person by role (never by name), method and one key quote. Never use AI to make up participants or answers.`,
             `<b>Step 4: Patterns and Needs Tree</b><br>
     Write up the patterns and surprises, then revise your problem statement. Break the big need into small, testable needs. No need should name a solution.`,
             `<b>Step 5: Early Direction and Work Division</b><br>
@@ -286,7 +289,7 @@ const CEN100_ASSIGNMENTS = {
         header: "Milestone 3: Failure Analysis Labs (6%)",
         description: `
       <ul>
-        <li><b>Part 1 (2%), due Oct 21:</b> in a sub-team of 4&ndash;5, review a documented engineering failure.</li>
+        <li><b>Part 1 (2%), due Oct 21:</b> in a sub-team of 4&ndash;5, review a documented engineering failure. You work on it in the Oct 14 lab.</li>
         <li><b>Part 2 (4%), due Oct 28:</b> the full team predicts the risks in its own project with an FMEA and presents a short design insight. The Oct 13 course-team update moved Part 2 to Oct 28.</li>
         <li>Both are submitted on D2L, each as its own submission. Check D2L for your section's exact time.</li>
         <li><b>Common mistakes:</b> failure modes that could fit any project, detectability scored backwards, overwriting the template's formulas or leaving its example row in, and one or two people doing all the talking.</li>
@@ -296,7 +299,7 @@ const CEN100_ASSIGNMENTS = {
             `<b>Step 1: Part 1, Pick a Failure and Research It</b><br>
     Choose a real, documented engineering failure from any field. Find 2&ndash;3 credible technical or peer-reviewed sources.`,
             `<b>Step 2: Part 1, Write the Review</b><br>
-    Write 1&ndash;2 pages answering only four questions: what happened, why it failed, lessons learned, and how to prevent it. Include the fishbone (Ishikawa) diagram the handout requires; the lecture calls it optional, so confirm with your GA before leaving it out. Cite your sources, then submit on D2L.`,
+    Write 1&ndash;2 pages answering only four questions: what happened, why it failed, lessons learned, and how to prevent it. Include the fishbone (Ishikawa) diagram the handout requires; the lecture calls it optional, so confirm with your GA before leaving it out. Cite your sources, add your team number and section in the header, then submit on D2L.`,
             `<b>Step 3: Part 2, List the Failure Modes</b><br>
     As a full team, list <b>at least 10 failure modes</b> specific to your project, covering the technical, human, environmental (real-world conditions), ethical and business categories. Replace the template's example battery-overheating row with your own risk.`,
             `<b>Step 4: Part 2, Score the Risks</b><br>
@@ -304,7 +307,7 @@ const CEN100_ASSIGNMENTS = {
             `<b>Step 5: Part 2, Plan the Actions</b><br>
     Review the top five risks on the automatically ranked summary. Give each one a specific action labelled Change, Test, Verify or Monitor. A high-severity risk still needs an action even if it ranks lower.`,
             `<b>Step 6: Design Insight and Submit</b><br>
-    Write one short paragraph on your top 2&ndash;3 risks, why they rank highest, and what you will change, test, verify or monitor. Present it briefly in the lab, with several people speaking within the time limit and everyone ready for GA questions. Submit on D2L and carry the insight into your notebook and the Midterm Design Review.`
+    Write one short paragraph on your top 2&ndash;3 risks, why they rank highest, and what you will change, test, verify or monitor. Present it briefly in the lab, with several people speaking within the time limit and everyone ready for GA questions. Add your team number and section, submit on D2L, and carry the insight into your notebook and the Midterm Design Review.`
         ]
     },
     m4_midterm_review: {
@@ -448,7 +451,7 @@ const CEN100_ASSIGNMENTS = {
         description: `
       <ul>
         <li>2-hour in-person written exam.</li>
-        <li>The date, room and coverage are set by the Registrar's exam schedule and announced on D2L. Final exam period: Dec 8&ndash;19, 2026, including Saturdays.</li>
+        <li>The date, room and coverage are set by the Registrar's exam schedule and announced on D2L. Final exam period: Dec 9&ndash;20, 2026, including weekends (confirmed on TMU's exams page).</li>
       </ul>
     `,
         dueDate: "",
