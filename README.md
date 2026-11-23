@@ -31,7 +31,7 @@ To add a completely new assignment, just copy and paste an existing assignment b
 * **Dates and weights:** the Fall 2026 CEN100 course outline, plus the course-team updates posted after it. For example, the Oct 13 update moved Failure Analysis Part 2 (FMEA) to Oct 28, and the Sept 25 update confirmed that reflections are emailed to your Project Manager.
 * **How to do each assignment** (steps, formats, common mistakes): the assignment handouts and rubrics, as summarized in the student-made CEN100 Guide.
 * Each Innovation Challenge milestone (M2 to M8) has its own entry, so students can plan a timeline for each one. The "Innovation Challenge Project" entry gives the overview.
-* **Still to confirm with the Lead GA (Aditya):** how each assignment is done, especially where the professional email and the reflections are submitted, whether the fishbone diagram is required, and the final exam period (the outline says Dec 8 to 19).
+* **Still to confirm with the Lead GA (Aditya):** how each assignment is done, especially where the professional email and the reflections are submitted, and whether the fishbone diagram is required. The final exam period is Dec 9 to 20 (TMU's exams page), which replaces the outline's Dec 8 to 19 line.
 
 ## Development Notes
 
