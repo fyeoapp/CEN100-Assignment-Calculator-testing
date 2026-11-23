@@ -75,7 +75,7 @@ const CEN100_ASSIGNMENTS = {
         description: `
       <ul>
         <li>Professional email exercise, sent from your official TMU email account.</li>
-        <li>Send your email draft, your choice paragraph and your reflection to your <b>Project Manager (PM)</b>.</li>
+        <li>Send your email draft, your research-choice paragraph and your reflection to your <b>Project Manager (PM)</b>.</li>
         <li>Due Wednesday, Sept 23 at 3:00 PM.</li>
         <li>One revision is allowed, but only after an on-time first attempt.</li>
       </ul>`,
@@ -85,12 +85,12 @@ const CEN100_ASSIGNMENTS = {
     Review the Email Policy in the course outline and the assignment handout: the required format, tone and information.`,
             `<b>Step 2: Draft the Email</b><br>
     Draft a professional email from your TMU account. The subject line must include <b>F2026CEN100</b>, and the body must include your name and student number.`,
-            `<b>Step 3: Write the Choice Paragraph and Reflection</b><br>
-    Write the choice paragraph and the reflection the handout asks for.`,
+            `<b>Step 3: Write the Research-Choice Paragraph and Reflection</b><br>
+    Write the research-choice paragraph and the reflection the handout asks for.`,
             `<b>Step 4: Review and Edit</b><br>
     Check for complete sentences, correct spelling and proper grammar.`,
             `<b>Step 5: Send It to Your PM</b><br>
-    Email the draft, choice paragraph and reflection to your Project Manager before 3:00 PM. Submit on time so that you keep your one allowed revision.`
+    Email the draft, research-choice paragraph and reflection to your Project Manager before 3:00 PM. Submit on time so that you keep your one allowed revision.`
         ]
     },
     academic_integrity: {
@@ -140,7 +140,7 @@ const CEN100_ASSIGNMENTS = {
         header: "Attendance Quizzes Participation (5%)",
         description: `
       <ul>
-        <li>Short D2L quizzes given at a random point during your assigned tutorial. Check D2L for timing.</li>
+        <li>Short D2L quizzes given during your assigned tutorial. Check your tutorial's quiz schedule on D2L. For Section 29 they run Wednesdays, 5:45 to 6:00 PM, with one attempt each.</li>
         <li>Attendance in your own section is mandatory.</li>
         <li>Answering for another student, or having someone answer for you while you are absent, is an academic integrity violation and earns zero for the whole 5%.</li>
       </ul>
@@ -289,7 +289,7 @@ const CEN100_ASSIGNMENTS = {
         header: "Milestone 3: Failure Analysis Labs (6%)",
         description: `
       <ul>
-        <li><b>Part 1 (2%), due Oct 21:</b> in a sub-team of 4&ndash;5, review a documented engineering failure.</li>
+        <li><b>Part 1 (2%), due Oct 21:</b> in a sub-team of 4&ndash;5, review a documented engineering failure. You work on it in the Oct 14 lab.</li>
         <li><b>Part 2 (4%), due Oct 28:</b> the full team predicts the risks in its own project with an FMEA and presents a short design insight. The Oct 13 course-team update moved Part 2 to Oct 28.</li>
         <li>Both are submitted on D2L, each as its own submission. Check D2L for your section's exact time.</li>
         <li><b>Common mistakes:</b> failure modes that could fit any project, detectability scored backwards, overwriting the template's formulas or leaving its example row in, and one or two people doing all the talking.</li>
